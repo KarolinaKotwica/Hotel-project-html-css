@@ -9,7 +9,9 @@
   --color-grey-dark: #333;
   --color-grey-dark-1: #777;
   --color-grey-dark-2: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0,0.3); }
+  --shadow: 0 2rem 5rem rgba(0,0,0,.06);
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,0.3);
+  --line: 1px solid var(--color-grey-light-2); }
 
 * {
   margin: 0;
@@ -48,7 +50,7 @@ body {
   height: 7rem;
   font-size: 1.4rem;
   background-color: #fff;
-  border-bottom: 1px solid var(--color-grey-light-2); }
+  border-bottom: var(--line); }
 
 .content {
   display: flex; }
@@ -62,8 +64,25 @@ body {
 
 .hotel-view {
   background-color: #fff;
-  flex-grow: 1;
-  height: 80rem; }
+  flex-grow: 1; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line); }
+
+.description {
+  font-size: 1.4rem;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem; }
+
+.user-reviews {
+  background-color: #fff;
+  flex: 1; }
 
 .logo {
   height: 3.25rem;
@@ -196,7 +215,7 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-2); }
+  border-bottom: var(--line); }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 300;
