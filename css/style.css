@@ -81,7 +81,10 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .logo {
   height: 3.25rem;
@@ -261,9 +264,14 @@ body {
   display: inline-block;
   background-color: transparent;
   transition: .2s; }
+  .btn-inline span {
+    margin-left: .3rem;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1);
     cursor: pointer; }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none; }
 
@@ -290,7 +298,8 @@ body {
     background-color: var(--color-primary);
     mask-image: url(../img/chevron-thin-right.svg);
     -webkit-mask-image: url(../img/chevron-thin-right.svg);
-    -webkit-mask-size: cover; }
+    -webkit-mask-size: cover;
+    mask-size: cover; }
 
 .recommend {
   font-size: 1.3rem;
@@ -352,3 +361,43 @@ body {
     color: var(--color-grey-light-2);
     font-family: sans-serif;
     z-index: 1; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+  position: relative; }
+  .cta__book-now {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem; }
+
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary));
+  color: #fff;
+  overflow: hidden;
+  position: relative; }
+  .btn > * {
+    transition: all .2s;
+    display: inline-block;
+    height: 100%;
+    width: 100%; }
+  .btn__visible {
+    padding: 2rem 7.5rem; }
+  .btn__invisible {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0;
+    transition: all .2s; }
+  .btn:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary)); }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn:hover .btn__invisible {
+    top: 0; }
